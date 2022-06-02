@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "ESNext",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "noFallthroughCasesInSwitch": true,
+    "typeRoots": ["src/ts-defenitions"],
+    "types": ["node"],
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": ["label"]
+        }
+      }
+    ]
+  },
+  "include": ["src"]
+}
