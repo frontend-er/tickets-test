@@ -18,7 +18,7 @@ function App() {
     <div data-test='component-app'>
       <AppWrapper>
         {tickets.map((i, index) => {
-          return <TicketItem index={index} item={i} />;
+          return <TicketItem key={i.id} index={index} item={i} />;
         })}
       </AppWrapper>
     </div>

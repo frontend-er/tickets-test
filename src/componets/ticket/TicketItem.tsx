@@ -1,5 +1,5 @@
 import { StatusEnum } from 'types/utils';
-import { Ticket } from 'componets/card/card';
+import { TicketCard } from 'componets/card/TicketCard';
 import { CheckBoxWrapper, HolderTicket } from 'App.styled';
 import { Checkbox } from '@mui/material';
 import { Description } from 'componets/description/Description';
@@ -22,11 +22,14 @@ export const TicketItem = ({ item, index }: Props) => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <Ticket>
+    <TicketCard>
       <HolderTicket>
-        <CheckBoxWrapper>
-          <Checkbox onClick={() => setChecked(!checked)} checked={checked} {...label} />
-        </CheckBoxWrapper>
+        <div style={{ height: '100%' }}>
+          <CheckBoxWrapper>
+            <Checkbox onClick={() => setChecked(!checked)} checked={checked} {...label} />
+          </CheckBoxWrapper>
+        </div>
+
         <div>
           <Description
             title={item.title}
@@ -61,6 +64,6 @@ export const TicketItem = ({ item, index }: Props) => {
           <ButtonsRow />
         </div>
       </HolderTicket>
-    </Ticket>
+    </TicketCard>
   );
 };

@@ -16,7 +16,7 @@ interface Props {
 export const TableMultiple = ({ rows }: Props) => {
   const separatedRows = rows.map((i) => {
     return (
-      <TableRow>
+      <TableRow key={i.label}>
         <LabelHolder>{i.label}</LabelHolder>
         <ChildrenComponetWrapper>{i.children}</ChildrenComponetWrapper>
       </TableRow>

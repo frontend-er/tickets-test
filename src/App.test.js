@@ -33,12 +33,14 @@ const findByTestAttr = (wrapper, val) => {
 
 test('renders without error', () => {
   const wrapper = setup();
+  // eslint-disable-next-line testing-library/await-async-query
   const appComponent = findByTestAttr(wrapper, 'component-app');
   expect(appComponent.length).toBe(1);
 });
 
 test('renders alert button', () => {
   const wrapper = setup();
+  // eslint-disable-next-line testing-library/await-async-query
   const button = findByTestAttr(wrapper, 'alert-button');
   expect(button.length).toBe(1);
 });
